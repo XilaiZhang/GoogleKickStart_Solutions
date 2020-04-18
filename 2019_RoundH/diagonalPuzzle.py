@@ -50,8 +50,6 @@ while seq<len(lines):
 			else:
 				joint[a,b]=1
 				joint[b,a]=1
-	#print neighbor
-	#print joint
 	
 	count1=helper(0,0,neighbor,joint)
 	count2=helper(0,1,neighbor,joint)
