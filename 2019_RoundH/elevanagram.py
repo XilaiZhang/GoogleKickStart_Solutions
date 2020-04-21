@@ -14,8 +14,8 @@ for line in fileinput.input():
     bigNum=0
     for i in range(len(numbers)):
         numbers[i]=int(numbers[i])
-        if numbers[i]>20:
-            numbers[i]=20+(numbers[i]&1)
+        if numbers[i]>=72:
+            numbers[i]=72+(numbers[i]&1)
         total+=numbers[i]
         if numbers[i]>9:
             bigNum+=1
