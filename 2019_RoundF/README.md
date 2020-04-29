@@ -1,1 +1,1 @@
-placeholder
+villages.py will not meet time constraint due to the slowness of python, villages.cpp will pass all test cases. However, the underlying ideas behind and theories of villages.py and villages.cpp are the same. The key idea is to build the graph first, identify the relationship between parent and child node, and then apply dp. Here I used bfs instead of dfs because the recursion depth limit posed by python, but either bfs or dfs will work!
