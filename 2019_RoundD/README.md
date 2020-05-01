@@ -1,1 +1,1 @@
-palce
+problem 2 latestGuests: My approach is different from the official analysis. We first precompute the next neighbor for each guest. Then for each consulate, we find the latest visitor in O(1) complexity. I have said this many times, but unfortunately python is still too slow to meet the time limit of this problem. I have included latestGuests.py and latestGuests.cpp here. LatestGuests.cpp will pass all test cases but the underlying theories behind .py and .cpp are same.
