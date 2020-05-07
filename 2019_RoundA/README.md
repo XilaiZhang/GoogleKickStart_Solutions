@@ -1,1 +1,1 @@
-placeholder
+Parcels.py: The key is to realize how we can transform an optimization problem into decision problem. Since we only care about the extreme values, we only need to inspect the biggest or smallest of all possible values. 
