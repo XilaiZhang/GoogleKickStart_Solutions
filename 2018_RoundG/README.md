@@ -1,1 +1,1 @@
-placeholder
+productTriplet.cpp: The official solution is O(N^2) if we assume the time complexity of hashing is O(1), but hashing of a large number could take non trivial time. My approach here instead is a linear scan. Similar to the approach used in valid triangle number (https://leetcode.com/problems/valid-triangle-number/), we fix the first two number, and the third number (product of the first two numbers) can only increase as we increase the second number or the first number. 
