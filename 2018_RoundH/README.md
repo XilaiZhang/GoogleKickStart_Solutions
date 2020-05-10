@@ -1,1 +1,1 @@
-placeholder
+countTheWays.cpp: noramlly when we are evaluating (A/B)mod C we would use fermat's little theorem to evaluate A % C * pow(B,mod-2) % C. But in this problem we are only dealing with binomials, and thus the division between factorials can be expressed as the product of consecutive numbers instead. For example, if we are interested in M!/(M-K)! mod C, all we need to do is calculate the product: (M-K+1)* (M-K+2)*...*(M-1)\*M
