@@ -1,1 +1,1 @@
-placeholder... I will add explanations soon
+In retrospect, I should have done better. Problem 1: needs to be careful with starting and ending conditions. Problem 2: topological sort is optimal and cleaner, but pure dfs also get ac. Problem 3: using an array to store previously seen prefix sums. Problem 4: segment tree and binary indexed tree both get AC, I have included implementations of both here.
