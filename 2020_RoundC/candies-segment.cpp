@@ -56,7 +56,6 @@ int main(){
             cin>>t;
             baseTree[base+i]=pow(-1,i)*t;
             interTree[base+i]=pow(-1,i)*(i+1)*t;
-            //cout<<"base is added as "<<t<<"  and inter is added as "<<interTree[base+i]<<endl;
         }
 
         for(int j=base-1;j>0;j--){
@@ -75,10 +74,8 @@ int main(){
                 update(interTree,base+l-1,pow(-1,l-1)*l*r);
             }
             else{
-                // g=l-1;g<=r-1;
-                long long basePart=query(baseTree,base+l-1,base+r-1); //might out of bound 
+                long long basePart=query(baseTree,base+l-1,base+r-1); 
                 long long interPart=query(interTree,base+l-1,base+r-1); 
-                //cout<<"base part is "<<basePart<<" and interPart is "<<interPart<<endl;
                 if(l%2==0){
                     interPart=-interPart;
                     result=result+interPart+(l-1)*basePart;
@@ -86,7 +83,6 @@ int main(){
                 else{
                     result=result+interPart-(l-1)*basePart;
                 }
-                //cout<<"result is changed by "<<interPart-(l-1)*basePart<<endl;
                 
             }
                 
