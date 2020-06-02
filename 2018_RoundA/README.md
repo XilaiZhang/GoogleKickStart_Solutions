@@ -1,1 +1,1 @@
-placeholder
+evenDigits.py: I first noticed that the most significant odd digit is the critical digit to consider. Then I used recursion to deal with the two scenarios: 1. if we remove odd digit by incrementing, we always add the complement to the current number. 2. if we remove odd digit by decrementing, we first subtract everything after the most significant odd digit, and then subtract a number of the form 111..1112 to obtain a number of the form 888...888. 
