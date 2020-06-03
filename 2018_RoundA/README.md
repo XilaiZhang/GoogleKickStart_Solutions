@@ -1,3 +1,5 @@
 evenDigits.py: I first noticed that the most significant odd digit is the critical digit to consider. Then I used recursion to deal with the two scenarios: 1. if we remove odd digit by incrementing, we always add the complement to the current number. 2. if we remove odd digit by decrementing, we first subtract everything after the most significant odd digit, and then subtract a number of the form 111..1112 to obtain a number of the form 888...888. 
 
 luckyDip.cpp: the expectation when no redip is allowed is sum/N. When we have K redips left, we compare the current value Vi with the expectation of K-1 redips. If Vi < expectation\[K-1], we redip Vi and achieve an expectation of expectation\[K-1]. Otherwise we keep Vi and choose not to redip. Remember to set percision for output display. 
+
+scrambledWords.cpp: we use a sliding window to maintain three variable. the start of the window, the end of the window, and a counter of the characters in the window. A sweep of a size l window along the character string gives us all potential word matches of size l. For this problem, we implement a customized hash function to meet the time constraints. 
