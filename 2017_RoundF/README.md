@@ -1,1 +1,1 @@
-placeholder
+hugeNumber.py: Even though this question might be trivial, My implementation is O(N) complexity and faster than the N log N method proposed by official analysis. Based on pigeon - hole theorem, we know that in the worst case, we are guaranteed to see a modolo loop if we times A with itself for 10^5+1 times. Based on this observation, we can identify the start of the modolo loop and the length of the modolo loop. The final answer is thus simply N's position in the modolo loop. 
