@@ -1,1 +1,1 @@
-placeholder
+center.cpp: I am not 100 percent sure that the function is unimodal on x axis and y axis. But since the problem spec does not say there could be multiple correct answers, it does not hurt to assume that there is one peak on x and y axis. And if we assume the function is unimodal, we can use tenary serach from there. 
