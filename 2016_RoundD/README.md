@@ -4,3 +4,5 @@ sitting.py: if the R is divisible by 3, we can divide the entire grid into 3\*1 
 XX.XX.XX.XX. and so on <br />
 .XX.XX.XX.XX and so on <br />
 X.XX.XX.XX.X and so on <br />
+
+codejamonCipher.cpp: dp, the key optimization comes from the fact that each vocab word's length<=20.
