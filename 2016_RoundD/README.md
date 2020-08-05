@@ -6,3 +6,5 @@ XX.XX.XX.XX. and so on <br />
 X.XX.XX.XX.X and so on <br />
 
 codejamonCipher.cpp: dp, the key optimization comes from the fact that each vocab word's length<=20.
+
+stretchRope.cpp: knapsack dp. dp\[L]=min(dp\[L],dp\[L-B]...dp\[L-A]). Remember to properly initialize everything.
