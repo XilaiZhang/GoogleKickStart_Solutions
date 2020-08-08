@@ -48,7 +48,7 @@ int helper(int x,int y){  // 1 for good, 2 for bad
         int count=0;
         int k=0;
         while(y+k<=N && count<=4){
-            if(helper(x+1,y+k)==1){dp[x][y]=1;return 1;} //could have RE?
+            if(helper(x+1,y+k)==1){dp[x][y]=1;return 1;} 
             if(y+k>=N){break;}
             if(b[y+k]!='*'){count++;}
             k++;
@@ -58,13 +58,13 @@ int helper(int x,int y){  // 1 for good, 2 for bad
         int count=0;
         int k=0;
         while(x+k<=M && count<=4){
-            if(helper(x+k,y+1)==1){dp[x][y]=1;return 1;} //could have RE?
+            if(helper(x+k,y+1)==1){dp[x][y]=1;return 1;} 
             if(x+k>=M){break;}
             if(a[x+k]!='*'){count++;}
             k++;
         }
     }
-    dp[x][y]=2;return 2; //rethink later
+    dp[x][y]=2;return 2; 
 }
 
 int main(){
@@ -77,9 +77,6 @@ int main(){
         N=b.size();
         memset(dp,0,sizeof dp);
         if(helper(0,0)==1){
-            /*for(int i=0;i<=8;i++){
-                for(int j=0;j<=6;++j){cout<<dp[i][j]<<" ";}cout<<endl;
-            }*/
             cout<<"Case #"<<tt<<": TRUE"<<"\n";}
         else{cout<<"Case #"<<tt<<": FALSE"<<"\n";}        
         
