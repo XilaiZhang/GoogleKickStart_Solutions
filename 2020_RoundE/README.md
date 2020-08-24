@@ -1,1 +1,5 @@
-placeholder
+highBuildings.py: Note that we can add shorter buildings between higher buildings, so that these shorter buildings are invisible to both spectators. e.g. a height sequence of 5 1 5 will make the 1 in the middle invisible from both sides. Spent a lot of time to discover this scenario during the competition.
+
+toys.cpp: Suppose we can play all toys, and we set total sum to be the E\[i] of all toys. As we iterate through all the toys, we will first greedily take as many toys as possible, because that will only increase the total sum and benefit the toys we have not seen so far. If at certain point a toy can not be played, it can never be played in the future, because the total sum can only decrease, and E\[i]+R\[i] will not change. Thus we remove this toy, and all toys we have seen so far that are affected by this toy. At any point, the amount of toys that can't be played is fixed and can be removed in any order. After removing all the toys that can not be played, we should be able to proceed to next toy and inspect.
+
+goldenStone.cpp: multi-source dijkstra, time complexity is E log V. Remember to use long long when constructing nodes. 
