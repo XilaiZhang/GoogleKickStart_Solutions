@@ -3,3 +3,5 @@ PaintersDuel.cpp: The problem can be solved by dfs based on the player's turn an
 ATMQueue.cpp: python submission might TLE with N log N algorithm, but C++ is safe.
 
 MetalBurst.py: straightforward greedy.
+
+yeetzhee.cpp: We maintain a vector S that records the mapping between group size and number of types. Let vector T be the vector we desire. Initially we have M types. If we have {2,2,3,5,5}, for example, then we have 2 types(2 and 5) for group size of 2, and 1 type (3) for group size of 1. Now at each step at index i of vector S, if there are some types at S\[i], we have the option to roll a dice of that type and move the type from S\[i] to S\[i+1]. Note that if the current prefix of S\[i] equals prefix of T\[i], we cannot perform the operation, otherwise we will never reach T. To calculate the expected steps, we need to use a formula, and I have included the formula in the comments.
