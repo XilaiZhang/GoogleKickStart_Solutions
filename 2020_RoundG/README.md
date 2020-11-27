@@ -1,1 +1,8 @@
-placeholder
+School was busy in October and November, and I did not participate in round g and round h. Here is a quick retroactive summary of the problems in round g: 
+
+Kick_Start.py: check the string that ends with "Start", and add up all previous occurences of string that starts with "Kick".
+MaximumCoins.cpp: iterate throught the matrix diagonally. 
+
+combinationLockLock.cpp: key observation is that the optimal value is one of the W values. We can therefore binary search on the left and right part to compute the sum.
+
+mergeCards.cpp: I added some simple graphical illustrations in the comments. Let dp\[i]\[j] be the number of times that the jth element will contribute to the total expected sum. Suppose we have in total i elements, and to compute the contribution of element j in the last round: (1) if the merge of two cards happens before element j, then j becomes the (j-1)th element in a total of i-1 elements. Therefore we add the contribution dp\[i-1]\[j-1] to dp\[i]\[j], multiplied by x, the chances of merge happending before j, where x = j/(i-1) --- j places where the merges can happen, out of i-1 places where the merge can happen. (2) if the merge of two cards happens after element j, then j becomes the jth element in a total of i-1 elements. Therefore we add the contribution dp\[i-1]\[j] to dp\[i]\[j], multiplied by x, the chances of merge happending after j, where x = (i-j-1)/(i-1) --- i-j-1 places where the merges can happen, out of i-1 places where the merge can happen. Finally, we take into account the the contribution in the current round: only the first and last element contribute once out of all possible merges, other elements will contribute twice. After we finish computing dp, we can compute result for each test case in O(N) time.
