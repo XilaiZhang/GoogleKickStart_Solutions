@@ -5,3 +5,4 @@ StayingHyradted: First of all similar to previous google problems, we break the 
 BananaBunches: Suppose we have two segments L1 and L2, Where L1 + L2 has a total length of N. As we iterate from left to right, and as the size of L1 is growing, we want to know: in L2, what is the minimum length to create a sum S. But if we move from left to right, then L2 is becoming smaller and smaller, and we do not have a convenient way to maintain all the optimal sums. On the other hand, if we move from right to left, we can keep track of all the optimal sums that are in L2, and add more sums to it as we iterate. In summary, we move from right to left, building possible sums in L1 starting from current index, and also use information of the optimal sums that has been building up in L2. <br />
 <br />
 simplePolygon: Pick's theorem was my favorite grid formula back in high school. I haven't used it for decade since high school and am thrilled to see it again today. 
+<br />
