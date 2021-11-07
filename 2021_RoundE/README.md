@@ -1,1 +1,4 @@
-placeholder
+shuffledAnagrams.py: key observation is that any character cannot be more than half. we sort the sequence and chop them into halves, and swap the two halves.  Another variation of this solution can be applied to generate random matchings for groups as well. <br /><br >
+birthdayCake.py: the official solution provided detailed analysis on lower bound and upper bound. In the end, we cut out borders first, and then deal with the inner topology based on K\*K blocks. <br /><br />
+palindromicCrossword.py: standard dfs. Remember to avoid max recursion depth if you are using python. <br /><br />
+IncreasingSequenceCardGame.py: the key observation is the dp relation such that, depending on the top card X, the sub pile could be reduced to a pile of cards greater than the top card X, and therefore reduced to a previous problem. i.e. a pile of cards from X+1 to N, produces the same result as a pile of cards from 1 to N-X. approximations can be applied on top of dp relations. <br /><br />
