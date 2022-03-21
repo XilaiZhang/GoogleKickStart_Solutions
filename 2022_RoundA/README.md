@@ -1,1 +1,13 @@
-placeholder
+Something I realized: once you start working, it becomes harder and harder to keep up with hobbies :)
+i.e. You work from Monday to Friday, and on weekends you participate in coding competitions. Well, then you have got no weekends :)
+
+To save some time, I will skip analysis for the easier questions.
+1. speedTyping.py: nit: read code or official analysis.
+2. challengeNine.py: nit: read code or official analysis.
+3. PalindromeFree.py: The key observation is that any panlidrome longer than 5 must contain a panlindrome of length 5 or 6. Therefore we can maintain a length 5 window as we scan throught the string from left to right. e.g. for string 110110000, a length 5 window at position 4 is '11011'. the dp relation goes as follow: let position be p, and let the length 5 window be abcde. let dp\[p]\[abcde] be whether it is possible to construct a palindrome free string after encountering a state of abcde at position p. Then dp\[p+1]\[bcdef] = true if any of the dp\[p]\[abcde]=true and (both bcdef and abcdef are not palindromes). I used a bit mask and therefore there are 32 states in total. Overall time complexity is 32 * length of string.
+4. interestingInteger.py: As detailed in the official analysis, the dp relationship is: f1(L,P,S) is the sum of D (from D = 0 to D = 9) f1(L−1,P×D,S+D). With this relationship, we can implement the solution as follow: for interesting integer between 1 and N, <br />
+(i) first find all numbers with less digits then N, using f1. e.g. if N = 159, N has 3 digits, then first addup interesting digits of length 1(1 to 9), and interesting digits of length 2 (from 10 to 99, around 15 in total).<br />
+(ii) then find all numbers strictly smaller than N starting at each position. e.g. if N = 159, at the second digit 5, find number of the form 10x (e.g. 101, 102 ... where 0 is smaller than 5, the second digit of 159) to 14x, since N is 15x. then find number of the form 150 - 158, where the first two digits are the same as N, but the third digit is smaller. find those using f1 dp relationship as well.<br />
+(iii) finally add 1 if N itself is interesting.<br />
+since every entry of F1 should be computed at most once, and while implementing i to iii using f1, we store computed results of f1 in an reusable array, the total time complexity amounts to the total number of entries of the array, which based on my implementation is around 118 * 3 * 3 * 5 * 8 * 14.<br />
+I probably could write more in detail, but its too late now and I really should go to bed and go to work tomorrow (Monday). Feel free to reach me on facebook, linkedin etc. if things are unclear
