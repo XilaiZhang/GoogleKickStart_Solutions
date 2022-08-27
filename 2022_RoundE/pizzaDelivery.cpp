@@ -131,7 +131,6 @@ int main()
         
         for(int i=0;i<N;++i){
             for(int j=0;j<N;++j){
-                //cout<<dp[i][j][M][all_set]<<"   ";
                 result = max(result, dp[i][j][M][all_set]);
             }
         }
