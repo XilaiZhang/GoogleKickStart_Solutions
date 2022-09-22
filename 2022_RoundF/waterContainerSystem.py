@@ -10,8 +10,6 @@ for tt in range(1,T+1):
         a, b = [int(x) for x in input().split()]
         graph[a].append(b)
         graph[b].append(a)
-    # print("graph is ")
-    # print(graph)
     q = deque([[1, 0]])
     geo = []
     seen = set()
@@ -23,8 +21,6 @@ for tt in range(1,T+1):
         if depth == len(geo):
             geo.append(0)
         geo[depth] += 1
-        # print("current_node is "+str(current_node))
-        # print(graph)
         if current_node in graph:
             for kid in graph[current_node]:
                 if kid not in seen:
@@ -36,12 +32,7 @@ for tt in range(1,T+1):
     for j in range(Q):
         _ = input()
 
-    # print("geo is ")
-    # print(geo)
-    # print("Q is "+str(Q))
     pos = bisect_left(geo, Q)
-    # print("pos is ")
-    # print(str(pos))
     result = -1
     if geo[pos] == Q:
         result = geo[pos]
