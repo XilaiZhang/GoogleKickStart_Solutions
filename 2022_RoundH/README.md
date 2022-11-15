@@ -1,1 +1,2 @@
-placeholder
+1. RunningInCircles.py:  We keep track of a few things: the direction when we last passed the starting line, the direction of the last run just before taking the break, and the offset of the current position relative to the starting line based on current direction. With these three variables being maintained, we can code up the different scenarios described in the spec using if and else statements.
+2. 
