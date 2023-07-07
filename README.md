@@ -1,3 +1,6 @@
+Update 07/07/2023:
+[All Google coding competitions have come to an end](https://developers.googleblog.com/2023/05/celebrate-googles-coding-competitions.html) Very sad news indeed. Hope everyone still loves competitive coding and keeps on learning, practicing, and achieving!
+
 My AC solutions that passes **\*\*ALL\*\*** test cases, with explanations. <br />
   **\*\*EVERY\*\*** problem before 2017_Round C and after 2017_round F. <br /><br />
 
